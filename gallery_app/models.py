@@ -45,7 +45,7 @@ class Image(models.Model):
     location = models.ForeignKey(Location, related_name='location', on_delete=models.DO_NOTHING)
     category = models.ForeignKey(Category, related_name='category', on_delete=models.DO_NOTHING)
     pub_date = models.DateTimeField(auto_now_add=True)
-    
+    photo = models.ImageField(upload_to = 'photos/')
     
     class Meta:
         ordering = ["pub_date"]
