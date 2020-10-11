@@ -9,6 +9,7 @@ urlpatterns=[
      url(r'^gallery/<int:image_id>/$', views.single_image_details, name='image_details'),
      url(r'^search/', views.search_category, name = 'search_category'),
      url(r'^category/portrait/$', views.portrait, name = 'portrait'),
+     url(r'^category/nature/$', views.nature, name = 'nature'),
 ]
 
 if settings.DEBUG:

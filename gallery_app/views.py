@@ -43,3 +43,8 @@ def portrait(request):
     portrait_category = Category.objects.get(pk=1)
     portrait = Image.objects.all().filter(category=portrait_category)
     return render(request,'category/portrait.html', {'portrait':portrait})
+
+def nature(request):
+    nature_category = Category.objects.get(pk=2)
+    nature = Image.objects.filter(category=nature_category)
+    return render(request,'category/nature/nature.html', {'nature':nature})
