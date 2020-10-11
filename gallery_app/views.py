@@ -39,3 +39,7 @@ def search_category(request):
         return render(request, 'search.html', {"message":message})
 
 
+def portrait(request):
+    portrait_category = Category.objects.get(pk=1)
+    portrait = Image.objects.all().filter(category=portrait_category)
+    return render(request,'category/portrait.html', {'portrait':portrait})
