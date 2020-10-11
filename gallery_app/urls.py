@@ -7,6 +7,7 @@ urlpatterns=[
      url(r'^$', views.index, name = 'home'),
      url(r'^gallery/$', views.gallery, name = 'gallery'),
      url(r'^gallery/<int:image_id>/$', views.single_image_details, name='image_details'),
+     url(r'^search/', views.search_category, name = 'search_category'),
 ]
 
 if settings.DEBUG:

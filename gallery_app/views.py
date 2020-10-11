@@ -9,8 +9,8 @@ def index(request):
     '''
     Index function loads the start up page 
     '''
-    
-    return render(request,'index.html')
+    gallery = Image.objects.all()[:6]
+    return render(request,'index.html',{'gallery':gallery})
 
 def gallery(request):
     '''
@@ -25,4 +25,17 @@ def single_image_details(request,image_id):
     '''
     image_detail = get_object_or_404(Image, pk=image_id)
     return render(request,'gallery/details.html', {'image_detail':image_detail})
+
+def search_category(request):
+    if 'category' in request.GET and request.GET["category"]:
+        search_term  =  request.GET.get("category")
+        searched_images = Image.search_by_category(search_term)
+        message  = f"{search_term}"
+        
+        return render(request, 'search.html', {"message":message, "images":searched_images})
+    else:
+        message = "You have not searched for any category"
+        
+        return render(request, 'search.html', {"message":message})
+
 
