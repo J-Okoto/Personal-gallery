@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  {% if title %}
+  <title>Joe Photography - {{title}}</title>
+  {% else %}
+    <title> Joe Photography </title>
+  {% endif %}
+
+</head>
+<body>
+    {% include "navbar.html" %}
+    {% block content %} {%endblock%}
+</body>
+</html>
