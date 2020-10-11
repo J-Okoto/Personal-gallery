@@ -14,8 +14,15 @@ def index(request):
 
 def gallery(request):
     '''
-    gallery function returns the list of photos in the database
+    Function returns the list of photos in the database
     '''
     gallery = Image.objects.all()
     return render(request, 'gallery/gallery.html', {'gallery':gallery})
+
+def single_image_details(request,image_id):
+    '''
+    Function that returns details of a single image. 
+    '''
+    image_detail = get_object_or_404(Image, pk=image_id)
+    return render(request,'gallery/details.html', {'image_detail':image_detail})
 
