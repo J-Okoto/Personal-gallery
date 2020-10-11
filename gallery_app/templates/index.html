@@ -9,17 +9,17 @@
               <h1 class="jumbotron-heading" style="font-size:72px;" >Joe Photography</h1>
               <p>We are the best Photographers in town</p>
               <p>
-                <a href="{% url 'nature'%" class="btn btn- success my-2">Nature</a>
+                <a href="{% url 'nature'%}" class="btn btn-success my-2">Nature</a>
                 <a href="{% url 'portrait'%}" class="btn btn-warning my-2">Portrait</a>
-                <a href="{% url 'wedding'%" class="btn btn-secondary my-2">Wedding</a>
-                <a href="{% url 'wildlife'%" class="btn btn-primary my-2">Wildlife</a>
+                <a href="{% url 'wedding'%}" class="btn btn-secondary my-2">Wedding</a>
+                <a href="{% url 'wildlife'%}" class="btn btn-primary my-2">Wildlife</a>
                 <a href="{% url 'gallery' %}" class="btn btn-info my-2">All Photos</a>
               </p>
             </div>
           </section>
     </div>
   
-    
+    {% include 'gallery/details.html' %}
 
         </div>
       </div>

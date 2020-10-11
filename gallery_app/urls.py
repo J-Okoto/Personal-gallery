@@ -10,6 +10,8 @@ urlpatterns=[
      url(r'^search/', views.search_category, name = 'search_category'),
      url(r'^category/portrait/$', views.portrait, name = 'portrait'),
      url(r'^category/nature/$', views.nature, name = 'nature'),
+     url(r'^category/wedding/$', views.wedding, name = 'wedding'),
+     url(r'^category/wildlife/$', views.wildlife, name = 'wildlife'),
 ]
 
 if settings.DEBUG:
