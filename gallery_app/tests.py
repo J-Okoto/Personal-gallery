@@ -17,3 +17,12 @@ class CategoryTestClass(TestCase):
     def setUp(self):
         self.cat1 = Category(name = 'wedding')
 
+class ImageTestClass(TestCase):
+    def setUp(self):
+        # Creating a new editor and saving it
+        self.image1= Location(name = 'India')
+        self.image1.save_location()
+        
+        self.new_image= Image(name = 'oldman',description = 'This is a random post',location = self.image1)
+        self.new_image.save()
+
