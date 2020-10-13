@@ -45,7 +45,7 @@ def portrait(request):
     return render(request,'category/portrait.html', {'portrait':portrait})
 
 def nature(request):
-    nature_category = Category.objects.get(pk=2)
+    nature_category = Category.objects.get(pk=4)
     nature = Image.objects.filter(category=nature_category)
     return render(request,'category/nature.html', {'nature':nature})
 
@@ -57,4 +57,4 @@ def wedding(request):
 def wildlife(request):
     wildlife_category = Category.objects.get(pk=4)
     wildlife = Image.objects.filter(category=wildlife_category)
-    return render(request,'category/wildlife.html', {'wildlife':wildlife})     
+    return render(request,'category/wildlife.html', {'wildlife':wildlife})      
