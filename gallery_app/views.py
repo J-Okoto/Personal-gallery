@@ -40,21 +40,21 @@ def search_category(request):
 
 
 def portrait(request):
-    portrait_category = Category.objects.get(pk=1)
+    portrait_category=Category.objects.get(pk=1)
     portrait = Image.objects.all().filter(category=portrait_category)
     return render(request,'category/portrait.html', {'portrait':portrait})
 
 def nature(request):
-    nature_category = Category.objects.get(pk=2)
+    nature_category=Category.objects.get(pk=2)
     nature = Image.objects.filter(category=nature_category)
     return render(request,'category/nature.html', {'nature':nature})
 
 def wedding(request):
-    wedding_category = Category.objects.get(pk=3)
+    wedding_category = Category.objects.get(pk=5)
     wedding = Image.objects.filter(category=wedding_category)
     return render(request,'category/wedding.html', {'wedding':wedding}) 
 
 def wildlife(request):
-    wildlife_category = Category.objects.get(pk=4)
+    wildlife_category = Category.objects.get(pk=3)
     wildlife = Image.objects.filter(category=wildlife_category)
     return render(request,'category/wildlife.html', {'wildlife':wildlife})      
